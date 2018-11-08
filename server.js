@@ -7,11 +7,12 @@ const port = process.env.PORT || 3000;
 
 const routes = {
   similar: 3001,
-  search: 3002,
+  // search: 3002,
   sizes: 3003,
+  description: 3003,
   reviews: 3004,
-  mpg: 3005,
-  style: 3006,
+  // mpg: 3005,
+  // style: 3006,  
 }
 
 app.use(morgan('dev'));
@@ -23,6 +24,17 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/:shoeID/search', (req, res) => {
+  const id = req.params.shoeID;
+  axios.get(`http://localhost:3002/${id}/search`)
+    .then(resp => res.status(200).send(resp.data));
+});
+
+app.get('/:shoeID/description', (req, res) => {
+  const shoeID = req.params.shoeID;
+  axios.get(`http://localhost:3003/${shoeID}/description`)
+    .then(resp => res.status(200).send(resp.data));
+});
 
 app.get('/:shoeID/:service', (req, res) => {
   const { shoeID } = req.params;

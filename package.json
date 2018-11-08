@@ -4,6 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start-all": "concurrently --kill-others 'npm run init-3001' 'npm run init-3002' 'npm run init-3003' 'npm run init-3004' 'npm run init-3005' 'npm run init-3006' 'npm run init-3007'",
+    "init-3001": "nodemon ../similar-products-carousel/server/server.js",
+    "init-3002": "nodemon ../Navigation-Search-Service e/server/server.js",
+    "init-3003": "nodemon ../Sizing-Cart_Service/server/index.js",
+    "init-3004": "nodemon ../Review-Service/server/server.js",
+    "init-3005": "nodemon ../main_phjoto_gallery/server/server.js",
+    "init-3006": "nodemon ../shoe_name_and_colors/server/server.js",
+    "init-3007": "nodemon ../page-footer/server/server.js",
     "start": "nodemon ./server.js"
   },
   "keywords": [],
