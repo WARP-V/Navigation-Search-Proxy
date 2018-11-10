@@ -1,14 +1,65 @@
-#Info {
-  display: block;
+#header-container {
+  width: 100%;
+  height: 60px;
 }
 
-#CountDown {
-  margin-left: 5px;
+#header-container .sub-nav-header {
+  margin-left: 380px;
+}
+
+#header-container #navigation .search-result-main {
+    background-color: #f7f7f7;
+}
+
+#header-container #navigation .sub-nav-item {
+  margin-right: 30px;
+  margin-left: 380px;
+  background-color: white;
+}
+
+#stacked-content {
+  max-width: 1152px;
+  margin: auto;
+}
+
+#gallery-container {
   display: inline-block;
+  float: left;
+  width: calc(100% - 452px);
+  padding: 45px;
 }
 
-#Related {
-  margin: 10%;
-  display: block;
+#colors-container {
+  display: inline-block;
+  float: left;
+  width: 317px;
+  padding: 65px 45px 0px 0px;
 }
 
+#sizing-container {
+  display: inline-block;
+  float: left;
+  width: 317px;
+  padding: 25px 45px 0px 0px;
+}
+
+#reviews-container {
+  display: inline-block;
+  float: left;
+  width: 317px;
+  padding: 25px 45px 0px 0px;
+}
+
+#carousel-container {
+  width: 100%;
+  display: inline-block;
+  float: left;
+  padding: 25px 0px 0px 0px;
+}
+
+#footer-container {
+  width: 100%;
+  display: inline-block;
+  float: left;
+  padding: 25px 0px 0px 0px;
+}
